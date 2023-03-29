@@ -1,0 +1,28 @@
+{
+  "extends": "./node_modules/gts/tsconfig-google.json",
+  "compilerOptions": {
+    "rootDir": ".",
+    "outDir": "build",
+    "esModuleInterop": true, //позволяет импортировать commonjs пакеты как es6
+    "baseUrl": "",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    }
+  },
+  "include": [
+    "./**/*"
+  ],
+  "exclude": [
+    "./plugins/**/*",
+    "./typings/**/*",
+    "./built/**/*"
+  ],
+  "ts-node": {
+    "files": true
+  },
+  "files": [
+    "src/types/express.d.ts"
+  ]
+}

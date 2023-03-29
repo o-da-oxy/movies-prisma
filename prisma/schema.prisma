@@ -1,0 +1,15 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["fieldReference", "clientExtensions"]
+}
+
+datasource db {
+  provider = "postgres"
+  url      = env("DATABASE_URL")
+}
+
+model Movies {
+  id          Int     @id @default(autoincrement())
+  name        String
+  description String
+}
